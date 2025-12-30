@@ -1,5 +1,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <stdint.h>
+#include <limits.h>
 #include <sys/param.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -9,6 +11,7 @@
 #include <errno.h>
 #include <signal.h>
 #include <string.h>
+#include <fcntl.h>
 #include <time.h>
 
 #include <sys/socket.h>
@@ -19,6 +22,7 @@
 #include <sys/resource.h>
 
 #include <pcap/pcap.h>
+#include <stddef.h>
 
 #define ARRAYSZ(x) (sizeof(x)/sizeof(*x))
 
