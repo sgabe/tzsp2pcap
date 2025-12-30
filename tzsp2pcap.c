@@ -1000,6 +1000,7 @@ err_cleanup_tzsp:
 		cleanup_tzsp_listener(tzsp_listener);
 
 err_cleanup_pipe:
+	shutting_down = 1;
 	if (self_pipe_fds[0] >= 0) {
 		int fd0 = self_pipe_fds[0];
 		self_pipe_fds[0] = -1;
