@@ -8,7 +8,7 @@ alterations to work with other devices.
 
 ## Usage
 ```
-Usage tzsp2pcap [-h] [-v] [-f] [-p PORT] [-o FILENAME] [-s SIZE] [-G SECONDS] [-C SIZE] [-z CMD]
+Usage tzsp2pcap [-h] [-v] [-f] [-p PORT] [-o FILENAME] [-s SIZE] [-G SECONDS] [-C SIZE] [-z CMD] [-l FILEPATH]
     -h           Display this message
     -v           Verbose (repeat to increase up to -vv)
     -f           Flush output after every packet
@@ -18,6 +18,7 @@ Usage tzsp2pcap [-h] [-v] [-f] [-p PORT] [-o FILENAME] [-s SIZE] [-G SECONDS] [-
     -G SECONDS   Rotate file every n seconds
     -C FILESIZE  Rotate file when FILESIZE is reached
     -z CMD       Post-rotate command to execute
+    -l FILEPATH  Write log messages to FILEPATH
 ```
 
 ## Example usage
