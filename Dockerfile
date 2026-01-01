@@ -9,7 +9,7 @@ RUN apk add --no-cache alpine-sdk libpcap-dev && \
 
 FROM alpine:latest
 
-RUN apk add --no-cache libpcap
+RUN apk add --no-cache libpcap tzdata
 
 COPY --from=builder /tmp/tzsp2pcap/tzsp2pcap /usr/bin
 
