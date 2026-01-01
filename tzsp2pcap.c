@@ -1005,13 +1005,6 @@ next_packet:
 			goto next_packet;
 		}
 
-		if (my_pcap.verbose) {
-			fprintf(stderr,
-			        "\tpacket data begins at offset 0x%zx, length 0x%zx\n",
-					(size_t)(p - recv_buffer),
-					(size_t)(readsz - (p - recv_buffer)));
-		}
-
 		// packet remains starting at p
 		ptrdiff_t payload_offset = p - recv_buffer;
 		if (payload_offset < 0) {
