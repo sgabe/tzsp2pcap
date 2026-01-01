@@ -18,6 +18,8 @@ RUN apk add --no-cache libpcap tzdata su-exec shadow && \
 COPY --from=builder /tmp/tzsp2pcap/tzsp2pcap /usr/bin
 COPY docker-entrypoint.sh /usr/local/bin
 
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
 VOLUME /data
 
 EXPOSE 37008/udp
